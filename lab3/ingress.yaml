@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: laba-ingress
+  namespace: default
+spec:
+  tls:
+  - secretName: tls-info
+    hosts: 
+      - laba.moe
+  rules:
+  - host: laba.moe
+    http:
+      paths:
+      - backend:
+          service:
+            name: frontend-deployment
+            port: 
+              number: 8080
+        path: /
+        pathType: ImplementationSpecific
