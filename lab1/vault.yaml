@@ -4,7 +4,7 @@ metadata:
   name: vault
   namespace: default
   labels:
-    forGodSake: PleaseWork
+    app: appa
 spec:
   containers:
    - name: vault-container

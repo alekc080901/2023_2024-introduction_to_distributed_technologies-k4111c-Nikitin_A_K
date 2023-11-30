@@ -7,7 +7,7 @@ Group: K4111c\
 Author: Nikitin Alexander Konstantinovich\
 Lab: Lab1\
 Date of create: 19.11.2023\
-Date of finished: 31.09.2023
+Date of finished:
 ## Содержание
 ### Ход работы
 Первым шагом работы была установка *Docker Engine* в качестве инструмента для развертывания виртуальных контейнеров и *Minicube* для развертывания *Kubernetes*-кластера.\
@@ -41,5 +41,5 @@ Date of finished: 31.09.2023
 **Главная страница сайта**
 ![Скриншот сайта](../imgs/lab1_success.png)
 
-**Диаграмма контейнеров**
+**Диаграмма организации контейнеров**
 ![Схемка](../imgs/scheme1.png)

@@ -6,29 +6,29 @@ Year: 2023/2024\
 Group: K4111c\
 Author: Nikitin Alexander Konstantinovich\
 Lab: Lab1\
-Date of create: 19.11.2023\
-Date of finished: 31.09.2023
+Date of create: 24.11.2023\
+Date of finished: 
 ## Содержание
 ### Ход работы
-.yaml-файл с **deployment** прикреплен в репозитории.
+.yaml-файл с **Deployment** прикреплен в репозитории.
 
 1. `minicube start`
 > Запуск кластера *Kubernetes*;
 
 2. `kubectl apply -f frontend.yaml`
-> Развертывание **deployment** *frontend-deployment* с помощью манифеста;
+> Развертывание **Deployment** *frontend-deployment* с помощью манифеста;
 
 3. `kubectl get pods`
-> Проверка создания подов после развертывания **deployment**. Так как в файле манифеста было указано две реплики, получили два работающих пода;
+> Проверка создания подов после развертывания **Deployment**. Так как в файле манифеста было указано две реплики, получили два работающих пода;
 
 4. `kubectl expose deployment frontend-deployment --type=LoadBalancer --port=8080 --target-port=3000`
-> Создание сервиса к **deployment** *frontend-deployment* (к двум его подам) с открытым портом 8080;
+> Создание сервиса к **Deployment** *frontend-deployment* (к двум его подам) с открытым портом 8080;
 
 5. `kubectl get services`
 > Проверка появления нового сервиса *frontend-deployment*;
 
 6. `minikube tunnel`
-> Пробрасываем порты к localhost для всех наших сервисов типа LoadBalancer (в данном случае сервис один).\
+> Пробрасываем порты к localhost для всех наших сервисов типа **LoadBalancer** (в данном случае сервис один).\
 > Приложение теперь доступно по пути http://127.0.0.1:8080/;
  
 7. Можно заметить, что при обновлении страницы с очисткой кэша (CTRL + F5) переменные окружения `REACT_APP_USERNAME` и `REACT_APP_COMPANY_NAME` не изменяются, так были однозначно заданы нами в манифесте и не подвергаются никаким изменениям извне.\
